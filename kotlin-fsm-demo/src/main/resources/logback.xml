@@ -1,0 +1,19 @@
+<configuration debug="false" scan="false" scanPeriod="15 seconds">
+
+    <!-- 標準出力 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+
+        <target>System.out</target>
+        <withJansi>true</withJansi>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %highlight(%-5level) %cyan(%logger) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- ログ調整 -->
+    <root level="TRACE">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="STDERR"/>
+    </root>
+
+</configuration>
