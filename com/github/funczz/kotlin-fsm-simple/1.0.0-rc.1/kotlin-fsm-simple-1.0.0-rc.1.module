@@ -1,0 +1,90 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.funczz",
+    "module": "kotlin-fsm-simple",
+    "version": "1.0.0-rc.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "6yjl4td3ybawxbptr7apmi7mhu"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.funczz",
+          "module": "kotlin-fsm-interface",
+          "version": {
+            "requires": "1.0.0-rc.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlin-fsm-simple-1.0.0-rc.1.jar",
+          "url": "kotlin-fsm-simple-1.0.0-rc.1.jar",
+          "size": 7976,
+          "sha512": "42e82b7da10b253cade074e4b386f4b9eec7218b4a6c678ef4f033ad84778f435bbf1910de7a39c991aec7668dcd85e4cb644e113c65d53828aef93d87101f29",
+          "sha256": "82464bc450594853fe3968a67bbd0dfd15e794fb0afdd0453892f7cb1ac64e3e",
+          "sha1": "b3055973ef0b7f699a39a2f0e25993ae4690c761",
+          "md5": "f5ba68a7e53c8f24ae627af48d0e2f20"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.4.20"
+          }
+        },
+        {
+          "group": "com.github.funczz",
+          "module": "kotlin-fsm-interface",
+          "version": {
+            "requires": "1.0.0-rc.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlin-fsm-simple-1.0.0-rc.1.jar",
+          "url": "kotlin-fsm-simple-1.0.0-rc.1.jar",
+          "size": 7976,
+          "sha512": "42e82b7da10b253cade074e4b386f4b9eec7218b4a6c678ef4f033ad84778f435bbf1910de7a39c991aec7668dcd85e4cb644e113c65d53828aef93d87101f29",
+          "sha256": "82464bc450594853fe3968a67bbd0dfd15e794fb0afdd0453892f7cb1ac64e3e",
+          "sha1": "b3055973ef0b7f699a39a2f0e25993ae4690c761",
+          "md5": "f5ba68a7e53c8f24ae627af48d0e2f20"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.funczz",
+    "module": "kotlin-fsm-reentrant",
+    "version": "1.0.0-rc.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "6yjl4td3ybawxbptr7apmi7mhu"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.funczz",
+          "module": "kotlin-fsm-interface",
+          "version": {
+            "requires": "1.0.0-rc.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlin-fsm-reentrant-1.0.0-rc.1.jar",
+          "url": "kotlin-fsm-reentrant-1.0.0-rc.1.jar",
+          "size": 9179,
+          "sha512": "03162dbaf471130faf7c45ae4912e8b623316149e643ac2a1787950463c5c2bfa25cfa07bf4409d8b799ca4556a58b0e93028120abcafd273f15db375c3de7c3",
+          "sha256": "6fadc00eb2a63eecaac54215c176895f9332f398da99d31a6cfee902f62706cc",
+          "sha1": "fd2e313b9bbf45a42ac8aa5b89c1529d15df3842",
+          "md5": "d9bd24d2f47afc495f01c93e0d6e0aa5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.4.20"
+          }
+        },
+        {
+          "group": "com.github.funczz",
+          "module": "kotlin-fsm-interface",
+          "version": {
+            "requires": "1.0.0-rc.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlin-fsm-reentrant-1.0.0-rc.1.jar",
+          "url": "kotlin-fsm-reentrant-1.0.0-rc.1.jar",
+          "size": 9179,
+          "sha512": "03162dbaf471130faf7c45ae4912e8b623316149e643ac2a1787950463c5c2bfa25cfa07bf4409d8b799ca4556a58b0e93028120abcafd273f15db375c3de7c3",
+          "sha256": "6fadc00eb2a63eecaac54215c176895f9332f398da99d31a6cfee902f62706cc",
+          "sha1": "fd2e313b9bbf45a42ac8aa5b89c1529d15df3842",
+          "md5": "d9bd24d2f47afc495f01c93e0d6e0aa5"
+        }
+      ]
+    }
+  ]
+}
