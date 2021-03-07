@@ -1,0 +1,41 @@
+name: deploy-release-to-github-pages
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Build with Gradle
+        run: ./gradlew -Prelease.useLastTag=true publish
+      - name: Copy
+        run: |
+          dist_dir=./build/mvn-repos
+          source0=./kotlin-fsm-interface/build/mvn-repos/testing
+          source1=./kotlin-fsm-interface/build/mvn-repos/stable
+          source2=./kotlin-fsm-reentrant/build/mvn-repos/testing
+          source3=./kotlin-fsm-reentrant/build/mvn-repos/stable
+          source4=./kotlin-fsm-simple/build/mvn-repos/testing
+          source5=./kotlin-fsm-simple/build/mvn-repos/stable
+          mkdir $dist_dir
+          for s in $source0 $source1 $source2 $source3 $source4 $source5; do
+            if test -e $s; then cp -rf $s/* $dist_dir/.; fi
+          done
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/mvn-repos
+          keep_files: true
+          enable_jekyll: true
